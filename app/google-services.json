@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "69066046446",
+    "firebase_url": "https://gtadvantage-3dfb7.firebaseio.com",
+    "project_id": "gtadvantage-3dfb7",
+    "storage_bucket": "gtadvantage-3dfb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69066046446:android:08d89c213e1163f0",
+        "android_client_info": {
+          "package_name": "gtadvantage.gyanjula.technologies.com.mbatestseries"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69066046446-04ru5lqep95jdn8c5qnnfq8gnqb4v7bm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL6lfhQ0MO5hvczqay1r5Axr5pkVFHFhU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/edit_profile"
+        android:title="Edit Profile"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        />
+    <item
+        android:id="@+id/contact_us"
+        android:title="Contact Us"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+
+        />
+    <item
+        android:id="@+id/analysis"
+        android:title="Progress"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        />
+    <item
+        android:id="@+id/rate_us"
+        android:title="Rate us"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        />
+    <item
+        android:id="@+id/share"
+        android:title="Share"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        />
+    <item
+        android:id="@+id/exit"
+        android:title="Logout"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        />
+</menu>

@@ -1,25 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="myapplication.satyam.example.com.mbatestseries">
+    package="gtadvantage.gyanjula.technologies.com.mbatestseries">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/rer"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fragment.Activities.SelectLevel">
+        <activity android:name=".fragment.Activities.SelectLevel" />
+        <activity android:name=".fragment.Activities.Sublevels" />
+        <activity
+            android:name=".fragment.Activities.QuesAns"
+            android:noHistory="true" />
+        <activity android:name=".fragment.Activities.Registration" />
+        <activity android:name=".fragment.Activities.FinishActivity" />
+        <activity android:name=".fragment.Activities.LaunchActivity"></activity>
+        <activity android:name=".fragment.Activities.CorrectAns" />
+        <activity
+            android:name=".fragment.Activities.CompanyRegister"
+            android:noHistory="true" />
+
+        <service android:name=".fragment.Firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".fragment.Activities.ApplyJobs" />
+        <activity
+            android:name=".fragment.Activities.PaymentActivity"
+            android:noHistory="true" />
+        <activity android:name=".fragment.Activities.MainActivity" />
+        <activity android:name=".fragment.Activities.leaderBoard" />
+        <activity
+            android:name=".fragment.Splash.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/FullscreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".fragment.Activities.Sublevels" />
-        <activity android:name=".fragment.Activities.QuesPaper" />
-        <activity android:name=".fragment.Activities.QuesAns"></activity>
+        <activity android:name=".fragment.Splash.Splash"></activity>
     </application>
 
 </manifest>
