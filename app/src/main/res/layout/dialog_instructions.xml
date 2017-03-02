@@ -146,7 +146,7 @@
         android:id="@+id/ok"
         android:layout_marginTop="16dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/button"
+        android:background="@drawable/btn"
         />
 
 </LinearLayout>

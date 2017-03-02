@@ -167,7 +167,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/button"
+        android:background="@drawable/btn"
         android:text="Register"
         android:textColor="#fff"
         android:id="@+id/comp_reg"

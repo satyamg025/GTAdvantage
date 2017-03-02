@@ -104,7 +104,7 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="70dp"
-            android:background="@drawable/button"
+            android:background="@drawable/btn"
             android:text="Previous"
             android:layout_marginLeft="10dp"
             android:id="@+id/prev"/>
@@ -112,7 +112,7 @@
             android:layout_width="100dp"
             android:layout_height="70dp"
             android:layout_marginLeft="100dp"
-            android:background="@drawable/button"
+            android:background="@drawable/btn"
             android:text="Next"
             android:id="@+id/next"
             />

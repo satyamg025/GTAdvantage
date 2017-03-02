@@ -141,7 +141,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/button"
+        android:background="@drawable/btn"
         android:text="Click to see correct answer"
         android:id="@+id/rightAns"/>
 

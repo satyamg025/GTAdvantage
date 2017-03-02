@@ -64,7 +64,7 @@
         android:text="Basic"
         android:layout_marginTop="50dp"
         android:layout_gravity="center"
-        android:background="@drawable/button"
+        android:background="@drawable/btn"
         android:id="@+id/btn_basic"/>
 
     <Button
@@ -73,14 +73,14 @@
         android:text="Intermediate"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:background="@drawable/button"
+        android:background="@drawable/btn"
         android:id="@+id/btn_intermediate"/>
     <Button
         android:layout_width="230dp"
         android:layout_height="50dp"
         android:text="Advanced"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/button"
+        android:background="@drawable/btn"
         android:layout_marginTop="30dp"
         android:id="@+id/btn_advanced"/>
     </LinearLayout>

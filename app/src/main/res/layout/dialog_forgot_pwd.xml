@@ -31,20 +31,20 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/button"
+        android:background="@drawable/btn"
         android:text="Get otp"
         android:id="@+id/verify_otp" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button"
+            android:background="@drawable/btn"
             android:text="Verify otp"
             android:id="@+id/verify_otp2"
             android:visibility="gone"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button"
+            android:background="@drawable/btn"
             android:text="Change Password"
             android:id="@+id/verify_otp3"
             android:visibility="gone"/>

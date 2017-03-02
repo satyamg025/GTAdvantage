@@ -23,7 +23,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/button"
+            android:background="@drawable/btn"
             android:text="Complete your profile"
             android:id="@+id/comp_profile"
             android:layout_marginTop="20dp"
