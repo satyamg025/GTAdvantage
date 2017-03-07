@@ -4,7 +4,7 @@
 
     <item android:title="LeaderBoard"
         android:id="@+id/leader_menu"
-        android:icon="@drawable/ic_fiber_manual_record_black_18dp"
+        android:icon="@drawable/ic_insert_invitation_white_24dp"
         app:showAsAction="always"
         />
 

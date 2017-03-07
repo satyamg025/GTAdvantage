@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,18 +28,27 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     DonutProgress donutProgress1;
-    TextView basic, intermediate, advance, name, mobile;
+    TextView basic, intermediate, advance, mobile;
     String mobileNo;Boolean isHomeLocked=false;
     int progress,percentile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        setTitle("Progress");
+        Spannable text = new SpannableString(getSupportActionBar().getTitle());
+        text.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.white)), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+
+        setTitleColor(getResources().getColor(R.color.white));
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         donutProgress1 = (DonutProgress) findViewById(R.id.progress);
         basic = (TextView) findViewById(R.id.basic);
         intermediate = (TextView) findViewById(R.id.intermediate);
         advance = (TextView) findViewById(R.id.advance);
-        name = (TextView) findViewById(R.id.name);
+        //name = (TextView) findViewById(R.id.name);
         mobile = (TextView) findViewById(R.id.mobile);
         final Handler handler = new Handler();
         final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -43,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.setMessage("Loading...");
         progressDialog.setCancelable(false);
         mobileNo=getIntent().getExtras().getString("mobile");
-        name.setText(getIntent().getExtras().getString("name"));
+       // name.setText(getIntent().getExtras().getString("name"));
         progressDialog.show();
         analysisResponse response = ServiceGenerator.createService(analysisResponse.class);
         Call<analysisPOJO> call = response.requestResponse(mobileNo);
@@ -129,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.leader_menu) {
             startActivity(new Intent(this, leaderBoard.class).putExtra("mobile",mobileNo));
         }
+        if(id==android.R.id.home)
+            onBackPressed();
         return false;
     }
 

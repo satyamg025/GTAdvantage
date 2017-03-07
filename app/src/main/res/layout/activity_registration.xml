@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/actionbar"
+            android:paddingTop="16dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,6 +55,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:hint="Name"
+        android:textColor="#000"
         android:inputType="text"
         android:id="@+id/reg_name"/>
     </android.support.design.widget.TextInputLayout>
@@ -37,6 +69,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:hint="Email"
+        android:textColor="#000"
         android:inputType="textEmailAddress"
         android:id="@+id/reg_email"/>
     </android.support.design.widget.TextInputLayout>
@@ -57,6 +90,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:hint="City"
+        android:textColor="#000"
         android:inputType="text"
         android:id="@+id/reg_city"/>
     </android.support.design.widget.TextInputLayout>
@@ -67,6 +101,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:textColor="#000"
             android:layout_gravity="center"
             android:hint="DOB (dd/mm/yyyy)"
             android:id="@+id/reg_dob"/>
@@ -87,8 +122,9 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
+            android:textColor="#000"
             android:hint="10th % / CGPA"
-            android:inputType="text"
+            android:inputType="number"
             android:id="@+id/ten_per"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -100,6 +136,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:hint="10th Board"
+            android:textColor="#000"
             android:inputType="text"
             android:id="@+id/ten_board"/>
     </android.support.design.widget.TextInputLayout>
@@ -112,7 +149,8 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:hint="12th %"
-            android:inputType="text"
+            android:textColor="#000"
+            android:inputType="number"
             android:id="@+id/twel_per"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -124,6 +162,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:hint="12th Board"
+            android:textColor="#000"
             android:inputType="text"
             android:id="@+id/twel_board"/>
     </android.support.design.widget.TextInputLayout>
@@ -136,7 +175,8 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:hint="Graduation %"
-            android:inputType="text"
+            android:textColor="#000"
+            android:inputType="number"
             android:id="@+id/grad_per"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -147,6 +187,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
+            android:textColor="#000"
             android:hint="Graduation College"
             android:inputType="text"
             android:id="@+id/grad_board"/>
@@ -170,6 +211,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:hint="Describe"
+            android:textColor="#000"
             android:inputType="text"
             android:id="@+id/find_desc"/>
     </android.support.design.widget.TextInputLayout>
@@ -182,6 +224,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:hint="Profile"
+            android:textColor="#000"
             android:focusable="false"
             android:inputType="text"
             android:id="@+id/profile_img"/>
@@ -195,6 +238,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:hint="Upload Your CV"
+            android:textColor="#000"
             android:inputType="text"
             android:focusable="false"
             android:id="@+id/cv"/>
@@ -205,9 +249,12 @@
         android:layout_height="50dp"
         android:id="@+id/done"
         android:text="Register"
+        android:textStyle="italic"
         android:layout_marginTop="10dp"
         android:textColor="#f5f5f5"
         android:background="@drawable/btn"/>
 
 </LinearLayout>
 </ScrollView>
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>

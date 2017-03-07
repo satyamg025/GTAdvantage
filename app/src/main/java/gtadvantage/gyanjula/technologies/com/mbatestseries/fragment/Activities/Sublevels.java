@@ -12,7 +12,12 @@ import android.os.CountDownTimer;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
@@ -60,6 +65,16 @@ public class Sublevels extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sublevels);
+        Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        setTitle("Practice Session");
+        Spannable text = new SpannableString(getSupportActionBar().getTitle());
+        text.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.white)), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+
+        setTitleColor(getResources().getColor(R.color.white));
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         quant=(CardView)findViewById(R.id.quant);
         lr=(CardView)findViewById(R.id.lr);
@@ -426,6 +441,13 @@ public class Sublevels extends AppCompatActivity {
         SponsorAsync la = new SponsorAsync();
         la.execute(paperId);
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id= item.getItemId();
+        if(id==android.R.id.home)
+            onBackPressed();
+        return super.onOptionsItemSelected(item);
     }
 
 

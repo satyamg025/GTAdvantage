@@ -13,6 +13,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -65,9 +70,17 @@ public class QuesAns extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ques_ans);
+        Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        setTitle("Test");
+        Spannable text = new SpannableString(getSupportActionBar().getTitle());
+        text.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.white)), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+
+        setTitleColor(getResources().getColor(R.color.white));
 
 
-       // MobileAds.initialize(getApplicationContext(), "ca-app-pub-4428461208226724~4013781697");
+
+        // MobileAds.initialize(getApplicationContext(), "ca-app-pub-4428461208226724~4013781697");
        // AdView mAdView = (AdView) findViewById(R.id.adView);
         //AdRequest adRequest = new AdRequest.Builder().build();
         //mAdView.loadAd(adRequest);
@@ -521,7 +534,7 @@ public class QuesAns extends AppCompatActivity {
     public void onBackPressed() {
         if(NetworkCheck.isNetworkAvailable(getApplicationContext())) {
             new AlertDialog.Builder(this)
-                    .setMessage("Are you sure you want to exit?")
+                    .setMessage(Html.fromHtml("<font color='#000'>Are you sure you want to exit</font>"))
                     .setCancelable(false)
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {

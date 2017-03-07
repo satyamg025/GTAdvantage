@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-<LinearLayout
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/actionbar"
+            android:paddingTop="16dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+
+        <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,6 +41,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/colorPrimary"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Activities.ApplyJobs">
 
@@ -26,25 +55,32 @@
             android:background="@drawable/btn"
             android:text="Complete your profile"
             android:id="@+id/comp_profile"
+            android:textStyle="italic"
             android:layout_marginTop="20dp"
             android:textColor="#fff"
             android:visibility="invisible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:id="@+id/welcome"
-            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textStyle="bold|italic"
             android:layout_marginLeft="50dp"
             android:visibility="visible"
             android:layout_marginTop="30dp"/>
     </RelativeLayout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:paddingTop="10dp">
+
 
     <LinearLayout
         android:id="@+id/ll_sl"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_height="wrap_content"
+        android:layout_height="360dp"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
@@ -53,17 +89,21 @@
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="350dp"
         android:id="@+id/recycler_jobs"/>
 
         </LinearLayout>
+    </ScrollView>
 
     <Button
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:background="@drawable/button"
+        android:background="@drawable/btn"
         android:text="Practice Session"
+        android:textStyle="italic"
+        android:textColor="#fff"
         android:id="@+id/practice_session"
         />
 </LinearLayout>
-</ScrollView>
+</LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>

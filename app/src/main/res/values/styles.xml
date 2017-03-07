@@ -4,20 +4,37 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/cb_dark_blue_button</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme.Base" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorHint">#fff</item>
-        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:textColorPrimary">#fff</item>
         <item name="android:textColorSecondary">@color/colorPrimary</item>
-        <item name="icon">@color/colorPrimary</item>
         <item name="divider">@color/colorPrimary</item>
         <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="icon">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>
+    <style name="AppTheme.Base2" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="android:textColorSecondary">@color/colorPrimary</item>
+        <item name="divider">@color/colorPrimary</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="icon">@color/white</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
         <item name="android:windowContentOverlay">@null</item>
 
     </style>
@@ -46,6 +63,8 @@
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@color/black_overlay</item>
     </style>
+
+    <style name="Hello" parent="AppTheme" />
 
 
 </resources>

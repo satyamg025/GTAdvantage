@@ -15,6 +15,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:hint="Enter username"
+            android:textColor="#000"
             android:inputType="text"
             android:id="@+id/username"/>
         <EditText
@@ -22,6 +23,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:hint="Enter Otp"
+            android:textColor="#000"
             android:visibility="gone"
             android:id="@+id/otp"/>
 
@@ -32,6 +34,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/btn"
+        android:textStyle="italic"
+        android:textColor="#fff"
         android:text="Get otp"
         android:id="@+id/verify_otp" />
         <Button
@@ -39,6 +43,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/btn"
             android:text="Verify otp"
+            android:textStyle="italic"
+            android:textColor="#fff"
             android:id="@+id/verify_otp2"
             android:visibility="gone"/>
         <Button
@@ -46,6 +52,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/btn"
             android:text="Change Password"
+            android:textStyle="italic"
+            android:textColor="#fff"
             android:id="@+id/verify_otp3"
             android:visibility="gone"/>
     </RelativeLayout>

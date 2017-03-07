@@ -25,7 +25,9 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -94,6 +96,10 @@ public class Registration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        setTitle("Profile");
+        setTitleColor(getResources().getColor(R.color.white));
 
 
         name=(EditText)findViewById(R.id.reg_name);
@@ -657,12 +663,16 @@ public class Registration extends AppCompatActivity {
                 String s = result.trim();
                 Log.e("regis",s);
                 loadingDialog.dismiss();
-                Intent intent=new Intent(Registration.this,ApplyJobs.class);
-                intent.putExtra("name",name.getText().toString());
-                intent.putExtra("mobile",mobile);
-                intent.putExtra("reg_status",true);
+                Intent intent=new Intent(Registration.this,LaunchActivity.class);
+                //intent.putExtra("name",name.getText().toString());
+                //intent.putExtra("mobile",mobile);
+                //intent.putExtra("reg_status",true);
                 startActivity(intent);
+                Toast.makeText(Registration.this,"Successfully Registered!!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Registration.this,"Please login to continue...",Toast.LENGTH_SHORT).show();
+
                 finish();
+
 
             }
         }

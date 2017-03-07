@@ -59,6 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/username"
+            android:textColor="#000"
             android:hint="Username"
             />
     </android.support.design.widget.TextInputLayout>
@@ -70,6 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/mobile_number"
+            android:textColor="#000"
             android:hint="Mobile Number"
             android:inputType="number"/>
     </android.support.design.widget.TextInputLayout>
@@ -81,6 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/password"
+            android:textColor="#000"
             android:hint="Password"
             android:inputType="textPassword"/>
     </android.support.design.widget.TextInputLayout>
@@ -93,6 +96,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/confirm_password"
             android:hint="Confirm Password"
+            android:textColor="#000"
             android:inputType="textPassword"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -104,6 +108,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/send_otp"
             android:hint="Otp"
+            android:textColor="#000"
             android:visibility="gone"
             android:inputType="number"/>
     </android.support.design.widget.TextInputLayout>
@@ -114,6 +119,7 @@
         android:id="@+id/register"
         android:background="@drawable/btn"
         android:text="Get Otp"
+        android:textStyle="italic"
         android:textColor="#fff"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"/>

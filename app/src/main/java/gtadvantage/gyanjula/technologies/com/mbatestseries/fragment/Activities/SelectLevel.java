@@ -12,6 +12,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -64,6 +68,16 @@ public class SelectLevel extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_level);
+        Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        setTitle("Practice Session");
+        Spannable text = new SpannableString(getSupportActionBar().getTitle());
+        text.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.white)), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+
+        setTitleColor(getResources().getColor(R.color.white));
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         basic = (Button) findViewById(R.id.btn_basic);
         intermediate = (Button) findViewById(R.id.btn_intermediate);
@@ -244,6 +258,13 @@ public class SelectLevel extends AppCompatActivity {
         fcmAsync la = new fcmAsync();
         la.execute(mobile,fcm);
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id= item.getItemId();
+        if(id==android.R.id.home)
+            onBackPressed();
+        return super.onOptionsItemSelected(item);
     }
 
 

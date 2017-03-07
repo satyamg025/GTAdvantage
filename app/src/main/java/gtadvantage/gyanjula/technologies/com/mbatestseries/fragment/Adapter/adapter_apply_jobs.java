@@ -22,6 +22,9 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,6 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import gtadvantage.gyanjula.technologies.com.mbatestseries.R;
+import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Activities.ApplyJobs;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Activities.PaymentActivity;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Fragments.Fragment_jobs;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Network.NetworkCheck;
@@ -92,7 +96,8 @@ public class adapter_apply_jobs extends RecyclerView.Adapter<adapter_apply_jobs.
             holder.cost.setClickable(false);
         }
         else{
-            holder.cost.setText(cost.get(position));
+            //holder.cost.setText(cost.get(position));
+            holder.cost.setText("Apply");
             holder.cost.setClickable(true);
         }
         if(holder.cost.isClickable()) {
@@ -102,10 +107,10 @@ public class adapter_apply_jobs extends RecyclerView.Adapter<adapter_apply_jobs.
                     if(NetworkCheck.isNetworkAvailable(context)) {
                     apply(mobile,cid.get(position));
 
-                        Intent intent=new Intent(context, PaymentActivity.class);
+                       /* Intent intent=new Intent(context, PaymentActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         intent.putExtra("cost",cost.get(position));
-                        context.startActivity(intent);
+                        context.startActivity(intent);*/
                      }
                     else{
                         Toast.makeText(context,"No Network Connection",Toast.LENGTH_LONG).show();
@@ -189,6 +194,18 @@ public class adapter_apply_jobs extends RecyclerView.Adapter<adapter_apply_jobs.
             protected void onPostExecute(String result){
                 String s = result.trim();
                // loadingDialog.dismiss();
+                try {
+                    JSONObject jo=new JSONObject(s);
+                    Toast.makeText(context,jo.getString("message"),Toast.LENGTH_LONG).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                Intent intent = new Intent(context, ApplyJobs.class);
+                intent.putExtra("mobile",mobile);
+                intent.putExtra("reg_status",true);
+                intent.putExtra("name",name2);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
 
 
             }

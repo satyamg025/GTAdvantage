@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         multiDexEnabled true
-        minSdkVersion 11
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 6
         versionName "6.1.0"

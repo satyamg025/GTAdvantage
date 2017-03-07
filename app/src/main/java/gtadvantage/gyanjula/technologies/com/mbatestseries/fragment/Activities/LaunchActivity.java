@@ -7,17 +7,22 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import com.google.firebase.iid.FirebaseInstanceId;
+import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -51,8 +56,9 @@ public class LaunchActivity extends AppCompatActivity {
     Button login;
     String PREF_NAME, mobile, name;
     TextView register_here,forgot;
-    EditText username, password;
-    Boolean doubleBackToExitPressedOnce;
+    EditText username;
+    TextInputEditText password;
+    Boolean doubleBackToExitPressedOnce=false;
     SharedPreferences sharedPreferences, sharedPreferences2;
     RecyclerView mrecyclerView;
     Boolean update=false;
@@ -62,6 +68,14 @@ public class LaunchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
+        Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        setTitle("GTAdvantage");
+        Spannable text = new SpannableString(getSupportActionBar().getTitle());
+        text.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.white)), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+
+       // setTitleColor(getResources().getColor(R.color.white));
+
 
         if(NetworkCheck.isNetworkAvailable(getApplicationContext())) {
             fetch_job();
@@ -74,8 +88,9 @@ public class LaunchActivity extends AppCompatActivity {
         login = (Button) findViewById(R.id.login);
         register_here = (TextView) findViewById(R.id.register_here);
         username = (EditText) findViewById(R.id.username);
-        password = (EditText) findViewById(R.id.password);
+        password = (TextInputEditText) findViewById(R.id.password);
         forgot=(TextView)findViewById(R.id.forgot);
+        //password.setInputType(129);
 
         forgot.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +108,7 @@ public class LaunchActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
+
                 if(NetworkCheck.isNetworkAvailable(getApplicationContext())) {
 
                     if(update){
@@ -349,5 +365,25 @@ public class LaunchActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed(){
+        if (doubleBackToExitPressedOnce) {
+            this.finishAffinity();
+            return;
+        }
 
-}
+        this.doubleBackToExitPressedOnce = true;
+
+        Toast.makeText(LaunchActivity.this,"Press once again to exit GTAdvantage",Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
+    }
+    }
+
+
+

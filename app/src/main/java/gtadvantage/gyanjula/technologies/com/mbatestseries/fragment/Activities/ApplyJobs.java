@@ -12,6 +12,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +25,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.apache.http.HttpEntity;
@@ -46,7 +50,6 @@ import gtadvantage.gyanjula.technologies.com.mbatestseries.R;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Adapter.adapter_apply_jobs;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Fragments.Fragment_contact;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Network.NetworkCheck;
-import okhttp3.OkHttpClient;
 
 public class ApplyJobs extends AppCompatActivity {
     RecyclerView mrecyclerView;
@@ -59,6 +62,13 @@ public class ApplyJobs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apply_jobs);
+        Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        setTitle("DashBoard");
+        Spannable text = new SpannableString(getSupportActionBar().getTitle());
+        text.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.white)), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+
+        setTitleColor(getResources().getColor(R.color.white));
 
 
         welcome = (TextView) findViewById(R.id.welcome);
@@ -66,10 +76,6 @@ public class ApplyJobs extends AppCompatActivity {
         comp_profile = (Button) findViewById(R.id.comp_profile);
         name2 = getIntent().getExtras().getString("name", "");
         mobile = getIntent().getExtras().getString("mobile", "");
-
-        new OkHttpClient.Builder()
-                .addNetworkInterceptor(new StethoInterceptor())
-                .build();
 
 
         if(NetworkCheck.isNetworkAvailable(getApplicationContext())) {
@@ -286,8 +292,9 @@ public class ApplyJobs extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int id) {
                                 Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                                startActivity(intent);
                                 finish();
+                                startActivity(intent);
+
                             }
                         })
                         .setNegativeButton("No", null)
@@ -295,14 +302,15 @@ public class ApplyJobs extends AppCompatActivity {
 
             } else {
                 new AlertDialog.Builder(this)
-                        .setMessage("Are you sure you want to logout?")
+                        .setMessage(Html.fromHtml("<font color='#000'>Are you sure you want to logout</font>"))
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 Intent intent = new Intent(getApplicationContext(), LaunchActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                                startActivity(intent);
                                 finish();
+                                startActivity(intent);
+
                             }
                         })
                         .setNegativeButton("No", null)
@@ -342,7 +350,7 @@ public class ApplyJobs extends AppCompatActivity {
     public void onBackPressed(){
         if (!getIntent().getExtras().getBoolean("reg_status",false)) {
             new AlertDialog.Builder(this)
-                    .setMessage("Are you sure you want to logout?")
+                    .setMessage(Html.fromHtml("<font color='#000'>Are you sure you want to logout</font>"))
                     .setCancelable(false)
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
@@ -357,7 +365,7 @@ public class ApplyJobs extends AppCompatActivity {
 
         } else {
             new AlertDialog.Builder(this)
-                    .setMessage("Are you sure you want to logout?")
+                    .setMessage(Html.fromHtml("<font color='#000'>Are you sure you want to logout</font>"))
                     .setCancelable(false)
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {

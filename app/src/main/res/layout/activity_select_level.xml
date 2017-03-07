@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/actionbar"
+            android:paddingTop="16dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -62,7 +93,9 @@
         android:layout_width="230dp"
         android:layout_height="50dp"
         android:text="Basic"
-        android:layout_marginTop="50dp"
+        android:textStyle="italic|normal"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:background="@drawable/btn"
         android:id="@+id/btn_basic"/>
@@ -71,6 +104,8 @@
         android:layout_width="230dp"
         android:layout_height="50dp"
         android:text="Intermediate"
+        android:textStyle="italic|normal"
+        android:textColor="#fff"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn"
@@ -79,6 +114,8 @@
         android:layout_width="230dp"
         android:layout_height="50dp"
         android:text="Advanced"
+        android:textStyle="italic|normal"
+        android:textColor="#fff"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/btn"
         android:layout_marginTop="30dp"
@@ -105,12 +142,15 @@
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="20dp">
+        android:layout_marginTop="10dp">
 
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
             android:id="@+id/recycler_job_paper"/>
     </LinearLayout>
     </LinearLayout>
 </ScrollView>
+</LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>

@@ -2,12 +2,14 @@
 <resources>
     <!--<color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>-->
-    <color name="colorPrimary">#2c3e50</color>
+    <color name="colorPrimary">#415b75</color>
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#18bc9c</color>
     <color name="orange">#FF4081</color>
     <color name="green">#059e0f</color>
+    <color name="white">#fff</color>
     <color name="red">#d20210</color>
+    <color name="actionbar">#FF094562</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>
