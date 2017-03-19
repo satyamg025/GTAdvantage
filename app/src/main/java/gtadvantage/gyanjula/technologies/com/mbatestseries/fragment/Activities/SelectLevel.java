@@ -229,10 +229,11 @@ public class SelectLevel extends AppCompatActivity {
 
                                 date.add(event_date.getString(i));
                                 ci.add(cid.getString(i));
+                                ci2.add(cid2.getString(i));
                                 comp_name.add(name.getString(i));
                             }
                         }
-                            Log.e("details5",ci.toString());
+                            Log.e("details5",ci2.toString());
 
                             mrecyclerView = (RecyclerView) findViewById(R.id.recycler_job_paper);
                             assert mrecyclerView != null;

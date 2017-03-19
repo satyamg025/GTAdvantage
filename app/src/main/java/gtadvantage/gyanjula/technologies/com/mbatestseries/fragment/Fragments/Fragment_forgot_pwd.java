@@ -54,7 +54,7 @@ public class Fragment_forgot_pwd extends DialogFragment {
     Button btn,btn2,btn3;
     String otp1,otp2,usr;
     int flg=0;
-    //TextInputLayout til,til2;
+    TextInputLayout til,til2;
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
         final LayoutInflater inflater=getActivity().getLayoutInflater();
@@ -63,8 +63,8 @@ public class Fragment_forgot_pwd extends DialogFragment {
 
         username=(EditText)view.findViewById(R.id.username);
         otp=(EditText)view.findViewById(R.id.otp);
-       // til=(TextInputLayout)view.findViewById(R.id.tilotp);
-        //til2=(TextInputLayout)view.findViewById(R.id.tilusr);
+        til=(TextInputLayout)view.findViewById(R.id.til1);
+        til2=(TextInputLayout)view.findViewById(R.id.til2);
         btn=(Button)view.findViewById(R.id.verify_otp);
         btn2=(Button)view.findViewById(R.id.verify_otp2);
         btn3=(Button)view.findViewById(R.id.verify_otp3);
@@ -150,6 +150,7 @@ public class Fragment_forgot_pwd extends DialogFragment {
                             otp1=jo.getString("otp");
                            // til.setVisibility(View.VISIBLE);
                             //username.setFocusable(false);
+                            til2.setVisibility(View.VISIBLE);
                             otp.setVisibility(View.VISIBLE);
                             //btn.setText("Verify Otp");
                             btn.setVisibility(View.GONE);
@@ -159,11 +160,16 @@ public class Fragment_forgot_pwd extends DialogFragment {
                                 public void onClick(View view) {
                                     otp2=otp.getText().toString();
                                     if(otp2.equals(otp1)){
+                                         til2.setVisibility(View.VISIBLE);
+                                        til.setPasswordVisibilityToggleEnabled(true);
+                                        til2.setPasswordVisibilityToggleEnabled(true);
+                                        til.setHint("Reset Password");
+                                        til2.setHint("Confirm Password");
+
 
                                         //btn.setText("Change password");
                                        // username.setFocusable(true);
-                                        username.setHint("Reset Password");
-                                        otp.setHint("Confirm Password");
+
                                         username.setTransformationMethod(PasswordTransformationMethod.getInstance());
                                         otp.setTransformationMethod(PasswordTransformationMethod.getInstance());
                                         //username.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);

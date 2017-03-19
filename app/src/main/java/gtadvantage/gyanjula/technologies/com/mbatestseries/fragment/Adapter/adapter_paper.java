@@ -56,7 +56,7 @@ public class adapter_paper extends RecyclerView.Adapter<adapter_paper.ViewHolder
 
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.btn.setText(comp_name.get(position)+"\t"+event_date.get(position));
         holder.btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +73,7 @@ public class adapter_paper extends RecyclerView.Adapter<adapter_paper.ViewHolder
 
                     if(d.equals(d3)){
 
-                        Fragment_comp_code fragment_comp=Fragment_comp_code.instance(ci2.get(pos-1),cid.get(pos),mobile,name,context);
+                        Fragment_comp_code fragment_comp=Fragment_comp_code.instance(ci2.get(position),cid.get(position),mobile,name,context);
                         fragment_comp.show(fragment,"Jobs Available");
                     }
                     else{

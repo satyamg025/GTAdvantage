@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,23 +9,34 @@
     android:paddingTop="16dp"
     android:paddingBottom="16dp">
 
-
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/til1"
+        android:hint="Enter username">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:hint="Enter username"
             android:textColor="#000"
             android:inputType="text"
             android:id="@+id/username"/>
-        <EditText
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/til2"
+        android:hint="Enter Otp"
+        android:visibility="gone">
+    <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:hint="Enter Otp"
             android:textColor="#000"
             android:visibility="gone"
             android:id="@+id/otp"/>
+    </android.support.design.widget.TextInputLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"

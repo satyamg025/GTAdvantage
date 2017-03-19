@@ -286,7 +286,7 @@ public class ApplyJobs extends AppCompatActivity {
         else if(id==R.id.exit) {
             if (!getIntent().getExtras().getBoolean("reg_status",false)) {
                 new AlertDialog.Builder(this)
-                        .setMessage("Are you sure you want to logout?")
+                        .setMessage(Html.fromHtml("<font color='#000'>Are you sure you want to logout</font>"))
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
