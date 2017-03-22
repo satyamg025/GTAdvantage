@@ -27,7 +27,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/rer"
+            android:src="@drawable/rer2"
             android:layout_gravity="center_horizontal"/>
 
         <LinearLayout

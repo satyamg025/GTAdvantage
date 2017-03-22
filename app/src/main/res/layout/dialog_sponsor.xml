@@ -12,7 +12,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome This Challenge is Sponsored by"
+        android:textStyle="italic|bold"
+        android:text="\t\t\t\t\t\t\tWelcome \nThis Challenge is Sponsored by"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:textSize="17dp"/>

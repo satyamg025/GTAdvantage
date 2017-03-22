@@ -10,13 +10,18 @@ import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.StrikethroughSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.lzyzsd.circleprogress.DonutProgress;
+
+import java.io.LineNumberReader;
 
 import gtadvantage.gyanjula.technologies.com.mbatestseries.R;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.POJO.analysisPOJO;
@@ -69,9 +74,52 @@ public class MainActivity extends AppCompatActivity {
                     basic.setText("Basic : " + Integer.toString((int) Math.ceil((responseBody.getBASIC() * 100) / 90)) + "%");
                     intermediate.setText("Intermediate : " + Integer.toString((int) Math.ceil((responseBody.getINTERMEDIATE() * 100) / 90)) + "%");
                     advance.setText("Advanced : " + Integer.toString((int) Math.ceil((responseBody.getADVANCED() * 100) / 90)) + "%");
-                    progress = (int) Math.ceil(((responseBody.getBASIC() + responseBody.getINTERMEDIATE() + responseBody.getADVANCED()) * 100) / 270);
-                    percentile = (int) Math.ceil(((responseBody.getBASIC() + responseBody.getINTERMEDIATE() + responseBody.getADVANCED()) * 100) / responseBody.getMAXTOTAL());
+                    progress = (int) Math.ceil((((float)(responseBody.getBASIC()) + (float)(responseBody.getINTERMEDIATE()) + (float)(responseBody.getADVANCED())) * 100) / 270);
+                    percentile = (int) Math.ceil((((float)(responseBody.getBASIC()) + (float)(responseBody.getINTERMEDIATE()) + (float)(responseBody.getADVANCED())) * 100) / 270);
                     Log.e(Integer.toString(percentile),Integer.toString(responseBody.getMAXTOTAL()));
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ObjectAnimator objectAnimator = ObjectAnimator.ofInt(donutProgress1, "Progress", 0, progress);
+                            objectAnimator.setDuration(500);
+                            objectAnimator.setInterpolator(new DecelerateInterpolator());
+                            objectAnimator.start();
+
+
+                            int color = 0;
+                            if (progress < 60) {
+                                if (this != null)
+                                    color = getResources().getColor(R.color.red);
+                            } else if (progress < 75) {
+                                if (this != null)
+                                    color = getResources().getColor(R.color.orange);
+                            } else {
+                                if (this != null)
+                                    color = getResources().getColor(R.color.green);
+                            }
+                            donutProgress1.setFinishedStrokeColor(color);
+                            donutProgress1.setTextColor(color);
+                            //Toast.makeText(MainActivity.this, String.valueOf(progress),Toast.LENGTH_SHORT).show();
+
+                            donutProgress1.setProgress(progress);
+                            donutProgress1.clearAnimation();
+                            color=0;
+                            if (percentile < 60) {
+                                if (this != null)
+                                    color = getResources().getColor(R.color.red);
+                            } else if (percentile < 75) {
+                                if (this != null)
+                                    color = getResources().getColor(R.color.orange);
+                            } else {
+                                if (this != null)
+                                    color = getResources().getColor(R.color.green);
+                            }
+
+
+                        }
+                    }, 1000);
+
 
                 }
                 catch (Exception e)
@@ -85,46 +133,6 @@ public class MainActivity extends AppCompatActivity {
                 t.printStackTrace();
             }
         });
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                ObjectAnimator objectAnimator = ObjectAnimator.ofInt(donutProgress1, "Progress", 0, progress);
-                objectAnimator.setDuration(500);
-                objectAnimator.setInterpolator(new DecelerateInterpolator());
-                objectAnimator.start();
-
-
-                int color = 0;
-                if (progress < 60) {
-                    if (this != null)
-                        color = getResources().getColor(R.color.red);
-                } else if (progress < 75) {
-                    if (this != null)
-                        color = getResources().getColor(R.color.orange);
-                } else {
-                    if (this != null)
-                        color = getResources().getColor(R.color.green);
-                }
-                donutProgress1.setFinishedStrokeColor(color);
-                donutProgress1.setTextColor(color);
-                donutProgress1.setProgress(progress);
-                donutProgress1.clearAnimation();
-                color=0;
-                if (percentile < 60) {
-                    if (this != null)
-                        color = getResources().getColor(R.color.red);
-                } else if (percentile < 75) {
-                    if (this != null)
-                        color = getResources().getColor(R.color.orange);
-                } else {
-                    if (this != null)
-                        color = getResources().getColor(R.color.green);
-                }
-
-
-            }
-        }, 1000);
 
     }
 

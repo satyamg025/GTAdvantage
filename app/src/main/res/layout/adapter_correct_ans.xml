@@ -21,7 +21,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ques"
+            android:text="Ques :"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
             android:id="@+id/adapter_ques_no"/>
         <TextView
             android:layout_width="wrap_content"
@@ -31,33 +33,42 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:id="@+id/ll1"
         android:paddingTop="10dp">
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/ic_done_black_24dp"
-            android:tint="#059e0f"/>
+            android:tint="@color/green"
+            android:src="@drawable/ic_done_black_24dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Correct Ans"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:text="Correct Ans :"
             />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
+            android:textColor="#fff"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:background="@color/green"
             android:id="@+id/adapter_correct_ans"/>
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:id="@+id/ll2"
+        android:layout_marginTop="10dp"
         android:paddingTop="10dp">
         <ImageView
             android:layout_width="20dp"
@@ -65,13 +76,17 @@
             android:id="@+id/img_usr_ans"/>
         <TextView
             android:layout_width="wrap_content"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
-            android:text="Your Ans"
+            android:text="Your Ans :"
             />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
+            android:layout_marginLeft="55dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
             android:id="@+id/adapter_user_ans"/>
     </LinearLayout>
 

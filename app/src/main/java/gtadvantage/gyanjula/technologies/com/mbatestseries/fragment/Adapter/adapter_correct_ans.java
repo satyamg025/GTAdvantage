@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -46,10 +47,12 @@ public class adapter_correct_ans extends RecyclerView.Adapter<adapter_correct_an
         if(user_ans[position].equals(correct_ans[position])){
             holder.img.setImageResource(R.drawable.ic_done_black_24dp);
             holder.img.setColorFilter(context.getResources().getColor(R.color.green));
+            holder.usrans.setBackgroundColor(context.getResources().getColor(R.color.green));
         }
          else{
             holder.img.setImageResource(R.drawable.ic_clear_black_24dp);
             holder.img.setColorFilter(context.getResources().getColor(R.color.red));
+            holder.usrans.setBackgroundColor(context.getResources().getColor(R.color.red));
         }
     }
 
@@ -64,8 +67,11 @@ public class adapter_correct_ans extends RecyclerView.Adapter<adapter_correct_an
 
         public TextView qs,corans,usrans;
         public ImageView img;
+        LinearLayout ll1,ll2;
         public ViewHolder(View itemView) {
             super(itemView);
+            ll1=(LinearLayout)itemView.findViewById(R.id.ll1);
+            ll2=(LinearLayout)itemView.findViewById(R.id.ll2);
             qs=(TextView)itemView.findViewById(R.id.adapter_ques);
             corans=(TextView)itemView.findViewById(R.id.adapter_correct_ans);
             usrans=(TextView)itemView.findViewById(R.id.adapter_user_ans);

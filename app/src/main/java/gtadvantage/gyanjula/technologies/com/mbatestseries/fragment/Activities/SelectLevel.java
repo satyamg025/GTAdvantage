@@ -12,6 +12,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -63,6 +64,7 @@ public class SelectLevel extends AppCompatActivity {
     List<String> ci=new ArrayList<String>(),comp_name=new ArrayList<String>(),date=new ArrayList<String>(),ci2=new ArrayList<String>();
     RecyclerView mrecyclerView;
     LinearLayoutManager mlinearLayoutManager;
+    RecyclerView.LayoutManager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -235,11 +237,12 @@ public class SelectLevel extends AppCompatActivity {
                         }
                             Log.e("details5",ci2.toString());
 
+
                             mrecyclerView = (RecyclerView) findViewById(R.id.recycler_job_paper);
                             assert mrecyclerView != null;
                             mrecyclerView.setHasFixedSize(true);
-                            mlinearLayoutManager = new LinearLayoutManager(getApplicationContext());
-                            mrecyclerView.setLayoutManager(mlinearLayoutManager);
+                            manager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+                            mrecyclerView.setLayoutManager(manager);
                             RecyclerView.Adapter mAdapter;
                             mAdapter = new adapter_paper(ci2,ci,comp_name,date,mobile,name2,getApplicationContext(),getFragmentManager());
                             mrecyclerView.setAdapter(mAdapter);
