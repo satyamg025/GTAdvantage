@@ -114,6 +114,7 @@ public class LaunchActivity extends AppCompatActivity {
                     if(update){
                         Fragment_update fragment_update = new Fragment_update();
                         fragment_update.show(getFragmentManager(),"Update App");
+                        fragment_update.setCancelable(false);
                     }
                     else {
                         login(LaunchActivity.this, user, pass);

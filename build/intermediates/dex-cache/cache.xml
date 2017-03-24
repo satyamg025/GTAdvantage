@@ -1,2 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/retrofit-2.1.0_f94e625cf33e2fe1ca7188b7c500d64c6fd1171c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.18/38da306aafee11459cd935a01d2c92a98dc670a4/library-1.0.18.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38da306aafee11459cd935a01d2c92a98dc670a4">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/library-1.0.18_02ca2c4e6448a54a5dec2bc0be6191ec6d753738.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/AndroidStudioProjects/gtadvantage/app/libs/httpcore-4.4.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e7501a1b34325abb00d17dde96150604a0658b54">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/httpcore-4.4.5_c04322ba18b6276944c8f5468bcc2414c06269b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/3a3315be496294c96c7b89f107836d48d98c598d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_01a3a4919d2a91dc05a9603736a8aa61dee26a18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.1/19047bdb6a4fc00a44124f64ca98e88fc204e7e3/okhttp-3.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="19047bdb6a4fc00a44124f64ca98e88fc204e7e3">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/okhttp-3.3.1_cb2b646664c00f4ccf1193ff3ff1dd72727c0ced.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/22212a99cd7b36f976efc80d51d6808d131227c7/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b81c788c5f175f94ddaac2f65e5d1726371e0963">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_c11a99f3ea6271784d0727e27ba049ff94e7f360.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/af2b5d07b4d5b7564db39de6af0021a3e86ca153/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f2774b1e02e5fbc524590311a744263c3b152d63">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_789d2cdce0a0a434c2637a5b083e5f2807294916.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/okio-1.8.0_81d01960bbaeddf763d6d3c4eee8afbc83b69c3d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/2f797fc5c5f9ca01e08bd5e60884924d1bbdf7c5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e6f9fb0d2ea982d656d6dca785a9097659395874">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_426c62dea2d1cf470eccf400d2535971098843c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/8955489f210c47aa7231fdbba9c92d83513e2254/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_bf12c19ad179e8d49b1285d49bcc547490e444d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/0d94c9864f0482af51b083acae5f6114b0b8f71a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="922c24fbfc4247947fcfaf2b95f295a16a8c3d17">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_80f12df7c7237fd97262708cf8ab09f2e073d5d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/AndroidStudioProjects/gtadvantage/app/libs/commons-logging-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4bfc12adfe4842bf07b657f0369c4cb522955686">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/commons-logging-1.2_f34a8b7e5e0ed36839faf418ddd662d0433993eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/AndroidStudioProjects/gtadvantage/payUMoneysdk/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca8b5ad2b58fced6871d63d5534972da63c0ff6d">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_1123ebbb70e3aeb13f21f288c6722e99ecb550b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/picasso-2.5.2_99b9c3bef393355ade3c6e00e1fc611fd2c7cebd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/android-studio/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/commons-io-2.4_d46630bdcc785dad569e34cedde9ef94500aa394.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/gson-2.7_f0d47e7c9e438513687d4e2bd123a0a00f7bdf39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/200b03873d3a0643be7d831fa42766fe5e824c0d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="51a11c41a08f099a204e1b8dcc04f27217de50ec">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_9246f546a48de180cf316dacc4b013f2a83d4c7c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.gradle/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.2.1/a18ff12a9ab5ae52fd30d42f134517997568231e/eventbus-2.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a18ff12a9ab5ae52fd30d42f134517997568231e">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/eventbus-2.2.1_b415dd411ffd5bc00e9ee18a0cc462e01bd9d92d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/59867abdf24fd01a0f3a29bed85f55e3f60325f1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c5d103b270b3f3b50d8e6b44aa8e068b0de33426">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_29a5bff7b588d81cabd4ba255a5a7240ca9d1da2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/fe5f8ad9fb9580d45523c5caaea7de30f17c1b37/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b3d0809a742c5f768c6aa9efc6decd5c1d6cd227">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_96eff1f0ef415348b3295f8fd242e471a1a48e33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/f0acb6436e4a709884e83fd07fa450c245b15363/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="591e7c1eb05bda2bcee22d151402fd8d61ffeca9">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_d34869fa2c59112b05831f998183a36e994a1914.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/converter-gson-2.1.0_d5e5723de817e12f158abe9c19c7a4e3168be234.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/c9cd59b6434528b060c6e7791e14e6eb77a2c9d9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_28857fe8a8f9c839d14bb2a6033eecdc38f17ae6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/1cf36cbff65349aae28626ac8016a98b52a95c0a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_d068b557fa13e64ea70e7e9f62ad11303e7de844.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.3.6/cf8bacbf0d476c7f2221f861269365b66447f7ec/httpmime-4.3.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cf8bacbf0d476c7f2221f861269365b66447f7ec">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/httpmime-4.3.6_f7857d70734fd0da13ab73d918fe41dc1c53426d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/4f445b1bdc64ec31a2b2148c3c24c59767d7cf10/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a511c684ea4c2cf31a3377d51e7677cb76696e07">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_d6fed15be286cadfbdb3b6f49034090aa76d2856.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.5.0/4de2b4ed3445c37ec1720a7d214712e845a24636/okhttp-2.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/okhttp-2.5.0_229297d1d0640e711b62353ea050b82c44ad17db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/72f37a176c9c2c34c24315a8dcf874f04475bffd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_52ef872e7551a8beb1ca9d5598719b96a193db6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.gradle/caches/modules-2/files-2.1/com.mobsandgeeks/android-saripaar/1.0.3/c24cfd9331b6d5a2ee15dccb60774c7cc5debd99/android-saripaar-1.0.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c24cfd9331b6d5a2ee15dccb60774c7cc5debd99">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/android-saripaar-1.0.3_ccad6fd9d89c7ae682f42ab4a4e7700dc45c3d5a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/satyam/.android/build-cache/fa62ba8fcbedb08d2b9e9ea758451b9adf4a232b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bc5cb7b8461ba72332bbc062210bf2bd52aa39ce">
+        <dex dex="/home/satyam/AndroidStudioProjects/gtadvantage/app/build/intermediates/pre-dexed/release/classes_d90d3acbd40699dae0e68246312c9dcf046f1755.jar" />
+    </item>
+
+</items>

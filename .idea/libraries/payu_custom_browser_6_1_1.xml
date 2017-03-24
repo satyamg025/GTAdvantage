@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="payu-custom-browser-6.1.1">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.1/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/fa62ba8fcbedb08d2b9e9ea758451b9adf4a232b/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/fa62ba8fcbedb08d2b9e9ea758451b9adf4a232b/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

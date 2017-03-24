@@ -50,10 +50,11 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <EditText
+        <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
+            android:singleLine="true"
             android:textColor="#000"
             android:id="@+id/username"/>
     </android.support.design.widget.TextInputLayout>
@@ -67,6 +68,7 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:textColor="#000"
+            android:singleLine="true"
             android:inputType="textPassword"
             android:id="@+id/password"/>
     </android.support.design.widget.TextInputLayout>
