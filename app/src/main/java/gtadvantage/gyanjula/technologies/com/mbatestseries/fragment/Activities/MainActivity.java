@@ -3,18 +3,24 @@ package gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Activities;
 import android.animation.ObjectAnimator;
 import android.app.ProgressDialog;
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+
 import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
+
+
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StrikethroughSpan;
 import android.util.Log;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.DecelerateInterpolator;
+
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +31,8 @@ import java.io.LineNumberReader;
 
 import gtadvantage.gyanjula.technologies.com.mbatestseries.R;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.POJO.analysisPOJO;
+
+
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Response.analysisResponse;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Util.ServiceGenerator;
 import retrofit2.Call;
@@ -35,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     DonutProgress donutProgress1;
     TextView basic, intermediate, advance, mobile;
     String mobileNo;Boolean isHomeLocked=false;
+    
     int progress,percentile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         donutProgress1 = (DonutProgress) findViewById(R.id.progress);
+        
         basic = (TextView) findViewById(R.id.basic);
         intermediate = (TextView) findViewById(R.id.intermediate);
         advance = (TextView) findViewById(R.id.advance);
@@ -59,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Loading...");
+        
         progressDialog.setCancelable(false);
         mobileNo=getIntent().getExtras().getString("mobile");
        // name.setText(getIntent().getExtras().getString("name"));
@@ -69,6 +80,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<analysisPOJO> call, Response<analysisPOJO> response) {
                 progressDialog.dismiss();
+                
+                
+                
+                
+                
+                
+                
                 analysisPOJO responseBody = response.body();
                 try {
                     basic.setText("Basic : " + Integer.toString((int) Math.ceil((responseBody.getBASIC() * 100) / 90)) + "%");
