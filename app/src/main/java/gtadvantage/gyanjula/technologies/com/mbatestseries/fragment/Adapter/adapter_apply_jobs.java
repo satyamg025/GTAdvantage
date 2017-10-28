@@ -14,9 +14,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+
+
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
@@ -26,8 +29,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -38,6 +43,8 @@ import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Activities.A
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Activities.PaymentActivity;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Fragments.Fragment_jobs;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Network.NetworkCheck;
+
+
 
 /**
  * Created by satyam on 1/15/17.
@@ -59,6 +66,16 @@ public class adapter_apply_jobs extends RecyclerView.Adapter<adapter_apply_jobs.
         this.job_name=jn;
         this.job_desc=jd;
         this.comp_desc=cd;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         this.salary=sal;
         this.exp=ex;
         this.event_date=ev;
