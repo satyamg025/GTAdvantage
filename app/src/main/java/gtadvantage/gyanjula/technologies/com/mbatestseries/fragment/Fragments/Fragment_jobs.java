@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import gtadvantage.gyanjula.technologies.com.mbatestseries.R;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Activities.ApplyJobs;
@@ -104,11 +103,13 @@ public class Fragment_jobs extends DialogFragment{
                     intent.putExtra("mobile",getArguments().getString("no",""));
                     intent.putExtra("reg_status",true);
                     intent.putExtra("name",getArguments().getString("name2",""));
+                    Log.e("hello","hello");
                     startActivity(intent);
                     getActivity().finish();
                 }
             }
         });
+        
         return builder.create();
     }
 
