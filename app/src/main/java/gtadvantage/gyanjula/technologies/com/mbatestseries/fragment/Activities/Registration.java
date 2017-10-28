@@ -9,16 +9,21 @@ import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
+
 import android.os.Build;
 import android.os.Bundle;
+
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+
+
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
@@ -28,51 +33,72 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+
+
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
+
 import org.apache.http.entity.mime.HttpMultipartMode;
+
 import org.apache.http.entity.mime.MultipartEntity;
+
 import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.impl.client.DefaultHttpClient;
+
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+
+
 import java.io.InputStreamReader;
+
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.ArrayLis
 import java.util.Calendar;
 import java.util.List;
+
 import java.util.Locale;
+
 
 import gtadvantage.gyanjula.technologies.com.mbatestseries.R;
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Network.NetworkCheck;
+
+
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Response.FileUploadService;
+
 import gtadvantage.gyanjula.technologies.com.mbatestseries.fragment.Util.ServiceGenerator2;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+
 import retrofit2.Callback;
 import retrofit2.Response;
 
@@ -85,17 +111,22 @@ public class Registration extends AppCompatActivity {
     List<String> study_options=new ArrayList<String>(),gen=new ArrayList<String>(),find_us=new ArrayList<String>();
     ArrayAdapter<String> adapter,adapter2,adapter3;
     int pos,pos2,pos3;
+    
     Button done;
     SharedPreferences sharedPreferences2;
-    String filepath,filename,filename2,filepath2,responseString=null;
+    String filepath,filename,filename2,filepath2,responseString
+        =null;
     int m;
     private int STORAGE_PERMISSION_CODE = 23;
     Calendar myCalendar = Calendar.getInstance();
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        
+        
         Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setTitle("Profile");
@@ -104,18 +135,23 @@ public class Registration extends AppCompatActivity {
 
         name=(EditText)findViewById(R.id.reg_name);
         email=(EditText)findViewById(R.id.reg_email);
+        
         city=(EditText)findViewById(R.id.reg_city);
         dob=(EditText)findViewById(R.id.reg_dob);
         ten_per=(EditText)findViewById(R.id.ten_per);
+        
         profile=(EditText)findViewById(R.id.profile_img);
         cv=(EditText)findViewById(R.id.cv);
+        
         ten_board=(EditText)findViewById(R.id.ten_board);
         twel_per=(EditText)findViewById(R.id.twel_per);
         twel_board=(EditText)findViewById(R.id.twel_board);
         grad_per=(EditText)findViewById(R.id.grad_per);
+        
         grad_board=(EditText)findViewById(R.id.grad_board);
         done=(Button)findViewById(R.id.done);
         spinner=(Spinner)findViewById(R.id.study);
+        
         spinner2=(Spinner)findViewById(R.id.gender);
         spinner3=(Spinner)findViewById(R.id.find_us);
 
@@ -123,10 +159,18 @@ public class Registration extends AppCompatActivity {
             spinner3.setVisibility(View.GONE);
             profile.setVisibility(View.GONE);
             cv.setVisibility(View.GONE);
+            
             spinner2.setVisibility(View.GONE);
             done.setText("Update");
             get_details(getIntent().getExtras().getString("mobile"));
         }
+        
+        
+        
+        
+        
+        
+        
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
@@ -149,6 +193,10 @@ public class Registration extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                
+                
+                
+                
                 // TODO Auto-generated method stub
                 new DatePickerDialog(Registration.this, date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
@@ -158,16 +206,19 @@ public class Registration extends AppCompatActivity {
 
 
         profile.setOnClickListener(new View.OnClickListener() {
+            
             @Override
             public void onClick(View view) {
                 m= 0;
                 if(isReadStorageAllowed()) {
+                    
                     Intent intent = new Intent();
                     intent.setType("*/*");
                     intent.setAction(Intent.ACTION_GET_CONTENT);
                     startActivityForResult(Intent.createChooser(intent, "Select File"), 1);
                 }
                 else{
+                    
                     requestStoragePermission();
                 }
             }
@@ -177,6 +228,7 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 m=1;
+                
                 if(isReadStorageAllowed()) {
                     Intent intent = new Intent();
                     intent.setType("*/*");
@@ -184,6 +236,7 @@ public class Registration extends AppCompatActivity {
                     startActivityForResult(Intent.createChooser(intent, "Select File"), 1);
                 }
                 else{
+                    
                     requestStoragePermission();
                 }
             }
