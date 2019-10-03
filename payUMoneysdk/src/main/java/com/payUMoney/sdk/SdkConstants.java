@@ -284,6 +284,7 @@ public class SdkConstants {
     public static final String UP_STATUS = "up_status";
     public static final String BANK_TITLE_STRING = "title";
     public static final String PAYMENT_NOT_VALID = "payment not valid";
+	public static final String LOGIN_FAIL="login credentials are incorrect";
 
     // for temporary payment
     /*public static String ccname_KEY = "ccname";
